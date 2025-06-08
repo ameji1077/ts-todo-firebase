@@ -18,6 +18,18 @@ Firebaseは認証とデータ保存のために最低限活用しており、CSS
 
 ---
 
+## スクリーンショット / screenshot
+### ログイン画面
+![login](./public/screens/login.png)
+
+### ユーザー登録画面
+![login](./public/screens/login.png)
+
+### ToDo登録・更新画面
+![todos](./public/screens/todo-create.png)
+
+---
+
 ## 使用技術 / Tech Stack
 
 - Vanilla TypeScript
@@ -46,7 +58,7 @@ Firebaseは認証とデータ保存のために最低限活用しており、CSS
   可読性と拡張性を高めるため、BEM 命名規則に沿ってスタイルを設計しています。
 
 - **フレームワーク非依存**
-VueやReactのようなモダンフレームワークを使用せず、バニラのTypeScriptとブラウザAPIのみで構築しています。
+VueやReactなどのようなモダンフレームワークを使用せず、バニラのTypeScriptとブラウザAPIのみで構築しています。
 DOM操作・イベント処理・状態管理などを抽象化レイヤーなしで実装することで、基礎力の強化と学習効果を目的としています。
 
 ---
