@@ -54,28 +54,36 @@ DOM操作・イベント処理・状態管理などを抽象化レイヤーな�
 ## 起動方法 / Getting Started
 
 1.リポジトリをクローン
+```
 git clone https://github.com/ameji1077/ts-todo-firebase.git
 cd ts-todo-firebase
+```
 
 2.依存パッケージをインストール
+```
 npm install
+```
 
 3.環境変数ファイル .env をプロジェクト直下に作成し、以下のように Firebase の構成情報を記述します。
+```
 VITE_FIREBASE_API_KEY=YOUR_API_KEY
 VITE_FIREBASE_AUTH_DOMAIN=YOUR_AUTH_DOMAIN
 VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
 VITE_FIREBASE_STORAGE_BUCKET=YOUR_STORAGE_BUCKET
 VITE_FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER_ID
 VITE_FIREBASE_APP_ID=YOUR_APP_ID
+```
 ※ 上記の値は Firebase Console から取得できます。
 
 4.開発サーバーを起動
+```
 npm run dev
+```
 
 ---
 
 ## ディレクトリ構成 / Project Structure
-
+```
 ts-todo-firebase/
 ├── public/              # 静的ファイル
 ├── src/
@@ -95,6 +103,7 @@ ts-todo-firebase/
 ├── package.json
 ├── README.md
 └── tsconfig.json
+```
 
 ## ライセンス / License
 
