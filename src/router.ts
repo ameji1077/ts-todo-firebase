@@ -1,6 +1,6 @@
 import Navigo from "navigo";
 import { setupAuthUI } from "./auth/authUI";
-import { setupTodoUI } from "./todo/create/todoCreateUI";
+import { setupTodoUI } from "./todos/create/todoCreateUI";
 import { auth } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
 
