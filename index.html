@@ -24,6 +24,7 @@
     <div id="register-form" class="auth auth--register is-none">
       <h2 class="auth__title">新規登録</h2>
       <form class="auth__form">
+        <input type="text" id="register-username" class="auth__input" placeholder="ユーザー名" required />
         <input type="email" id="register-email" class="auth__input" placeholder="メールアドレス" required />
         <input type="password" id="register-password" class="auth__input" placeholder="パスワード" required />
         <button type="submit" class="auth__button">登録</button>
@@ -38,12 +39,33 @@
     <div id="todo-app" class="todo-app is-none">
       <!-- 共通ヘッダー -->
       <header class="todo-app__header">
-        <h2 class="todo-app__title">ToDo アプリ</h2>
-        <button id="logout-button" class="todo-app__logout">ログアウト</button>
+        <div>
+          <button id="menu-open" class="todo-app__menu-button">☰</button>
+        </div>
+        <div>
+          <h1 class="todo-app__title">
+            <a href="#" id="to-index">ToDoアプリ</a>
+          </h1>
+        </div>
+        <div>
+          <span id="user-display-name" class="todo-app__header-info"></span>
+        </div>
       </header>
+
+      <!--　ハンバーガーメニュー -->
+      <nav id="side-menu" class="todo-app__side-menu is-hidden">
+        <button id="menu-close" class="todo-app__menu-button">×</button>
+        <ul class="todo-app__menu-list">
+          <li><a href="#" data-route="/">Todo登録</a></li>
+          <!-- <li><a href="#" data-route="/list">Todo一覧</a></li>
+          <li><a href="#" data-route="/mypage">マイページ</a></li> -->
+        </ul>
+        <button id="logout-button" class="todo-app__logout">ログアウト</button>
+      </nav>
 
       <!-- Todo登録画面 -->
       <div id="todo-create-ui" class="todo-app__create">
+        <h2 class="todo-app__create-title">Todo登録</h2>
         <form id="todo-form" class="todo-app__form">
           <input type="text" id="todo-input" class="todo-app__input" placeholder="タスクを入力" required />
           <button type="submit" class="todo-app__add-button">追加</button>

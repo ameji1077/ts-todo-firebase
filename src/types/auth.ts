@@ -3,6 +3,10 @@ export interface AuthFormInput {
   password: string;
 }
 
+export interface RegisterFormInput extends AuthFormInput {
+  displayName: string;
+}
+
 export interface AuthState {
   isAuthenticated: boolean;
   userId: string | null;

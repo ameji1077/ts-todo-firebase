@@ -2,14 +2,13 @@
    共通スタイル
 ============================ */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
   box-sizing: border-box;
 }
 
@@ -32,8 +31,8 @@ input[type="text"] {
 
 button {
   padding: 0.5rem;
-  background-color: #1976d2;
   color: white;
+  background-color: #1976d2;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -52,13 +51,13 @@ button:hover {
 ============================ */
 
 .auth {
-  background: white;
+  width: 100%;
+  max-width: 400px;
+  margin: 150px 0;
   padding: 1.5rem;
+  background: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  max-width: 400px;
-  width: 100%;
-  margin: 150px 0;
 }
 
 .auth__title {
@@ -81,8 +80,8 @@ button:hover {
 
 .auth__button {
   padding: 0.5rem;
-  background-color: #1976d2;
   color: white;
+  background-color: #1976d2;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -116,30 +115,84 @@ button:hover {
    Todoアプリ画面
 ============================ */
 .todo-app {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  max-width: 500px;
   width: 100%;
 }
 
 .todo-app__header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: white;
+}
+
+.todo-app__menu-button {
+  padding: 0;
+  color: #000;
+  background: none;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.todo-app__menu-button:hover {
+  background: none;
 }
 
 .todo-app__title {
-  font-size: 1.5rem;
   margin: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.todo-app__title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.todo-app__header-info {
+  display: flex;
+  justify-content: end;
+}
+
+.todo-app__side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  z-index: 1000;
+  transition: left 0.3s ease;
+  width: 200px;
+  height: 100%;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.todo-app__side-menu--active {
+  left: 0;
+}
+
+.todo-app__menu-list {
+  padding: 0;
+  list-style: none;
+}
+
+.todo-app__menu-list li {
+  margin-bottom: 1rem;
+}
+
+.todo-app__menu-list a {
+  color: #333;
+  text-decoration: none;
 }
 
 .todo-app__logout {
-  background-color: #e53935;
-  color: white;
+  position: absolute;
+  bottom: 5rem;
   padding: 0.5rem 1rem;
+  color: white;
+  background-color: #e53935;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -149,6 +202,22 @@ button:hover {
   background-color: #c62828;
 }
 
+.todo-app__create {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.todo-app__create-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 .todo-app__form {
   display: flex;
   gap: 0.5rem;
@@ -156,7 +225,6 @@ button:hover {
 }
 
 .todo-app__input {
-  flex: 1;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -164,8 +232,8 @@ button:hover {
 
 .todo-app__add-button {
   padding: 0.5rem 1rem;
-  background-color: #1976d2;
   color: white;
+  background-color: #1976d2;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -176,8 +244,8 @@ button:hover {
 }
 
 .todo-app__list {
-  list-style: none;
   padding: 0;
+  list-style: none;
 }
 
 #todo-app__list li {

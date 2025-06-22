@@ -3,10 +3,12 @@ import type { Todo } from '../../types';
 import { fetchTodos, saveTodo } from '../todoService';
 import { getAuth } from 'firebase/auth';
 import { getSessionItem, setSessionItem } from '../../utils/sessionStorage';
+import { fetchDisplayName } from '../../user/userService';
 
 const input = document.getElementById('todo-input') as HTMLInputElement;
 const form = document.getElementById('todo-form') as HTMLFormElement;
 const todayList = document.getElementById('todo-today-list') as HTMLUListElement;
+const userDisplayName = document.getElementById('user-display-name') as HTMLElement;
 let todoAppInitialized = getSessionItem<boolean>('todoAppInitialized');
 
 export async function  setupTodoUI() {
@@ -18,6 +20,17 @@ export async function  setupTodoUI() {
     loginForm.classList.add('is-none');
     registerForm.classList.add('is-none');
     todoApp.classList.remove('is-none');
+  }
+
+  const auth = getAuth();
+  const user = auth.currentUser;
+  if (user) {
+    const displayName = await fetchDisplayName(user.uid);
+    if (displayName) {
+      userDisplayName.textContent = `ようこそ、${displayName}さん！`;
+    } else {
+      userDisplayName.textContent = `ようこそ、名無しさん！`;
+    }
   }
 
   let todos = await fetchTodos();

@@ -1,5 +1,5 @@
 import { login, register } from "./authService";
-import type { AuthFormInput } from "../types";
+import type { AuthFormInput, RegisterFormInput } from "../types";
 import router from "../router";
 
 export function setupAuthUI(mode: 'login' | 'register') {
@@ -40,7 +40,8 @@ export function setupAuthUI(mode: 'login' | 'register') {
   if (registerForm) {
     registerForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const formData: AuthFormInput = {
+      const formData: RegisterFormInput = {
+        displayName: (document.getElementById('register-username') as HTMLInputElement).value,
         email: (document.getElementById('register-email') as HTMLInputElement).value,
         password: (document.getElementById('register-password') as HTMLInputElement).value
       };
