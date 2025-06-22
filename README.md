@@ -26,7 +26,9 @@ Firebaseは認証とデータ保存のために最低限活用しており、CSS
 ![login](./public/screens/register.png)
 
 ### ToDo登録・更新画面
-![todos](./public/screens/todo-create.png)
+![todos](./public/screens/todo-create_1.png)
+
+![todos](./public/screens/todo-create_2.png)
 
 ---
 
